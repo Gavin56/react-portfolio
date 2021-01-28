@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable react/jsx-no-target-blank */
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
@@ -5,28 +6,25 @@ import Switch from "@material-ui/core/Switch";
 import Paper from "@material-ui/core/Paper";
 import Grow from "@material-ui/core/Grow";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./style.css"
+import "./style.css";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    height: 180,
+    // height: 180,
   },
   container: {
     display: "flex",
   },
   paper: {
-    margin: theme.spacing(1),
+    margin: theme.spacing(3),
+    width: 400,
+    height: 400,
   },
-  svg: {
-    width: 100,
-    height: 100,
-  },
-  polygon: {
-    fill: theme.palette.common.white,
-    stroke: theme.palette.divider,
-    strokeWidth: 1,
-  },
+  // polygon: {
+  //   fill: theme.palette.common.white,
+  //   stroke: theme.palette.divider,
+  //   strokeWidth: 1,
+  // },
 }));
 
 export default function SimpleGrow() {
@@ -46,79 +44,18 @@ export default function SimpleGrow() {
       <div className={classes.container}>
         <Grow in={checked}>
           <Paper elevation={4} className={classes.paper}>
-            {/* <svg className={classes.svg}>
-              <polygon
-                points="0,100 50,00, 100,100"
-                className={classes.polygon}
-              />
-            </svg> */}
-
-            <div className="col mb-4">
-              <div className="card bg-dark">
-                <div className="image-container">
-                  <a href="https://gavin56.github.io/weatherman/">
-                    <img
-                      src="https://github.com/Gavin56/images/blob/main/Webp.net-resizeimage%20(1).png?raw=true"
-                      className="img-fluid"
-                      alt="Weather App Screenshot"
-                    />
-                  </a>
-
-                  <a
-                    href="https://gavin56.github.io/weatherman/"
-                    className="image-text"
-                  >
-                    Visit Application Page
-                  </a>
-                </div>
-
-                <div className="card-body">
-                  <h5 className="card-header bg-secondary">Weather App</h5>
-
-                  <button
-                    className="btn btn-info"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#weatherAppInfo"
-                    aria-expanded="false"
-                    aria-controls="weatherAppInfo"
-                  >
-                    View Info
-                  </button>
-
-                  <div className="collapse" id="weatherAppInfo">
-                    <div className="card card-body bg-dark" id="weatherInfoBox">
-                      <p className="card-text">
-                        Find the weather forecast for up to 5 days out in cities
-                        around the world.
-                      </p>
-
-                      <div className="card-body">
-                        <a
-                        //   style="color:rgb(0, 202, 202);"
-                          href="https://gavin56.github.io/weatherman/"
-                          target="_blank"
-                          className="card-link"
-                        >
-                          Deployed Application
-                        </a>
-
-                        <br />
-                        <br />
-
-                        <a
-                        //   style="color:rgb(0, 202, 202);"
-                          href="https://github.com/Gavin56/weatherman"
-                          target="_blank"
-                          className="card-link"
-                        >
-                          Github Repo
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <div className="project-tile">
+              <h3>Project Title</h3>
+              <p>Project Description</p>
+              <div className="fill">
+                <img
+                  className="project-image"
+                  alt="Weather App"
+                  src="https://github.com/Gavin56/images/blob/main/Webp.net-resizeimage%20(1).png?raw=true"
+                ></img>
               </div>
+              <a>Link 1</a>
+              <a>Link 2</a>
             </div>
           </Paper>
         </Grow>
@@ -129,12 +66,17 @@ export default function SimpleGrow() {
           {...(checked ? { timeout: 1000 } : {})}
         >
           <Paper elevation={4} className={classes.paper}>
-            <svg className={classes.svg}>
-              <polygon
-                points="0,100 50,00, 100,100"
-                className={classes.polygon}
-              />
-            </svg>
+            <div className="project-tile">Hello</div>
+          </Paper>
+        </Grow>
+
+        <Grow
+          in={checked}
+          style={{ transformOrigin: "0 0 0" }}
+          {...(checked ? { timeout: 1000 } : {})}
+        >
+          <Paper elevation={4} className={classes.paper}>
+            <div className="project-tile">Hello</div>
           </Paper>
         </Grow>
       </div>
