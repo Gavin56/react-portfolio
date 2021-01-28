@@ -1,0 +1,209 @@
+html { 
+    background: url('https://wallpaperset.com/w/full/a/8/4/38610.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+.footer {
+    border-top-style: solid;
+    border-width: thick;
+    border-color: teal;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(65, 65, 65);
+    color: rgb(102, 102, 102);
+    text-align: center;
+    position: fixed;
+}
+
+#footerText {
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+header nav h1 {
+    background-color: teal; 
+    color: white; 
+    font-family: 'Rokkitt', serif;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+}
+
+#navbarToggleExternalContent {
+    font-family: 'Cinzel', serif;
+}
+
+.navbar {
+    background-color: lightgray; padding: 17px; border-style:ridge; border-color: rgb(65, 65, 65);
+}
+
+#background { 
+    background: url('https://wallpaperset.com/w/full/a/8/4/38610.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 5px;
+  }
+
+#jumbotron {
+    margin-top:10rem; 
+    margin-bottom:10rem;
+}
+
+#portfolioJumbotron {
+    margin-top:2rem; 
+    margin-bottom:2rem;
+    width:100%;
+}
+
+#page-title {
+    color: teal; 
+    font-family: 'Cinzel', serif;
+    font-size: 75px;
+}
+
+@media screen and (max-width: 490px) {
+    #page-title {
+        text-align: center;
+        font-size: 30px;
+    }
+}
+
+@media screen and (min-width: 490px) {
+    #page-title {
+        letter-spacing: 3px;
+        /* margin-left: 100px; */
+        text-align: center;
+    }
+}
+
+#pull-left {
+    float:left;
+    width:50%; 
+    margin: 0px 23px 0px 30px;
+}
+
+#contactInfoLeft {
+    font-family: 'Courier New', Courier, monospace; 
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+#contactInfoRight {
+    font-family: 'Courier New', Courier, monospace; 
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+#aboutMeText {
+    margin: 0px 30px 30px 30px; 
+    font-family:Verdana, 'Geneva', Tahoma, sans-serif;
+}
+
+/* .col-6 img {
+    margin-bottom: 30px;
+} */
+
+.img-fluid {
+    border: 1px black solid;
+    border-radius: 5px;
+}
+
+.image-container:hover .img-fluid {
+    opacity: 40%;
+}
+
+.image-text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:white;
+    font-size: 20px;
+    font-family: 'Play', sans-serif;
+    margin-right: -19px;
+  }
+
+  .image-text:hover {
+    text-decoration: none;
+    color: white;
+  }
+
+  @media screen and (max-width: 992px) {
+      .image-text {
+          font-size: 15px;
+          margin-right: -19px;
+          padding-bottom: 20px;
+      }
+  }
+
+.imageRow {
+    padding: 10px;
+    text-align: center;
+}
+
+.card {
+    padding: 10px;
+}
+
+.card-header {
+    text-align: center;
+    font-family: 'Play', sans-serif;
+    font-weight: 700;
+    font-size: 23px;
+}
+
+@media screen and (max-width: 992px) {
+    .card-header {
+        font-size: 18px;
+    }
+}
+
+.card-body {
+    color: white;
+    text-align: center;
+    font-family: 'Play', sans-serif;
+}
+
+.card-text {
+    font-style: italic;
+}
+
+.btn-info {
+    margin-top: 10px;
+}
+
+#weatherInfoBox {
+    border: 1px solid rgb(0, 216, 216);
+    margin-top: 10px;
+}
+
+#quizInfoBox {
+    border: 1px solid rgb(0, 216, 216);
+    margin-top: 10px;
+}
+
+#plannerInfoBox {
+    border: 1px solid rgb(0, 216, 216);
+    margin-top: 10px;
+}
+
+#covidInfoBox {
+    border: 1px solid rgb(0, 216, 216);
+    margin-top: 10px;
+}
+
+.col-md-6 {
+    float: left;
+}
+
+.row {
+    margin-bottom: 30px;
+}
+
+
