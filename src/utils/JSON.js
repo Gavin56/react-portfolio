@@ -20,27 +20,27 @@ const projects = [
         appLink: "https://gavin56.github.io/planner/",
         repoLink: "https://github.com/Gavin56/planner"
     },
-    {
-        name: "Coding Quiz",
-        description: "Answer questions about coding before the time runs out.",
-        image: "https://github.com/Gavin56/images/blob/main/Webp.net-resizeimage.png?raw=true",
-        appLink: "https://gavin56.github.io/code-quiz/",
-        repoLink: "https://github.com/Gavin56/code-quiz"
-    },
-    {
-        name: "Employee Directory",
-        description: "A React application that dynamically updates an employee data table as the user types a search.",
-        image: "https://raw.githubusercontent.com/Gavin56/employee-directory/master/assets/images/employee-directory-main.png",
-        appLink: "https://gavin56.github.io/employee-directory-official/",
-        repoLink: "https://github.com/Gavin56/employee-directory"
-    },
-    {
-        name: "Weather App",
-        description: "Find the weather forecast for up to 5 days in cities around the world.",
-        image: "https://github.com/Gavin56/images/blob/main/Webp.net-resizeimage%20(1).png?raw=true",
-        appLink: "https://gavin56.github.io/weatherman/",
-        repoLink: "https://github.com/Gavin56/weatherman"
-    }
+    // {
+    //     name: "Coding Quiz",
+    //     description: "Answer questions about coding before the time runs out.",
+    //     image: "https://github.com/Gavin56/images/blob/main/Webp.net-resizeimage.png?raw=true",
+    //     appLink: "https://gavin56.github.io/code-quiz/",
+    //     repoLink: "https://github.com/Gavin56/code-quiz"
+    // },
+    // {
+    //     name: "Employee Directory",
+    //     description: "A React application that dynamically updates an employee data table as the user types a search.",
+    //     image: "https://raw.githubusercontent.com/Gavin56/employee-directory/master/assets/images/employee-directory-main.png",
+    //     appLink: "https://gavin56.github.io/employee-directory-official/",
+    //     repoLink: "https://github.com/Gavin56/employee-directory"
+    // },
+    // {
+    //     name: "Weather App",
+    //     description: "Find the weather forecast for up to 5 days in cities around the world.",
+    //     image: "https://github.com/Gavin56/images/blob/main/Webp.net-resizeimage%20(1).png?raw=true",
+    //     appLink: "https://gavin56.github.io/weatherman/",
+    //     repoLink: "https://github.com/Gavin56/weatherman"
+    // }
 ];
 
 export default projects;

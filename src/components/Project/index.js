@@ -2,84 +2,77 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Switch from "@material-ui/core/Switch";
-import Paper from "@material-ui/core/Paper";
+import Card from "@material-ui/core/Card";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import CardMedia from "@material-ui/core/CardMedia";
 import Grow from "@material-ui/core/Grow";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
+import Button from "@material-ui/core/Button";
+import Typography from "@material-ui/core/Typography";
 import "./style.css";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    // height: 180,
   },
   container: {
     display: "flex",
   },
-  paper: {
+  card: {
     margin: theme.spacing(3),
-    width: 400,
-    height: 400,
+    width: 320,
+    height: 350,
   },
-  // polygon: {
-  //   fill: theme.palette.common.white,
-  //   stroke: theme.palette.divider,
-  //   strokeWidth: 1,
-  // },
+  description: {
+    height:50
+  },
+  title: {
+    textAlign: "center",
+  }
 }));
 
 export default function SimpleGrow({ projects }) {
   const classes = useStyles();
   const [checked, setChecked] = React.useState(true);
 
-  //   const handleChange = () => {
-  //     setChecked((prev) => !prev);
-  //   };
-
   return (
     <div className={classes.root}>
-      {/* <FormControlLabel
-        control={<Switch checked={checked} onChange={handleChange} />}
-        label="Show"
-      /> */}
       <div className={classes.container}>
         {projects.map((project) => (
-          <Grow in={checked}>
-            <Paper elevation={4} className={classes.paper}>
-              <div className="project-tile">
-                <h3>{project.name}</h3>
-                <p>{project.description}</p>
-                <div className="fill">
-                  <img
-                    className="project-image"
-                    alt="Weather App"
-                    src={project.image}
-                  ></img>
-                </div>
-                <a>Link 1: {project.appLink}</a>
-                <a>Link 2: {project.repoLink}</a>
-              </div>
-            </Paper>
+          <Grow
+            in={checked}
+            style={{ transformOrigin: "0 0 0" }}
+            {...(checked ? { timeout: 1000 } : {})}
+          >
+            <Card elevation={4} className={classes.card}>
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  height="170"
+                  image={project.image}
+                  title={project.name}
+                />
+                <CardContent>
+                  <Typography className={classes.title} gutterBottom variant="h5" component="h2">
+                    {project.name}
+                  </Typography>
+                  <Typography
+                    className={classes.description}
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    {project.description}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button className="btn" size="small" href={project.appLink}>Deployed Application</Button>
+                <Button className="btn" size="small" href={project.repoLink}>Github Repo</Button>
+              </CardActions>
+            </Card>
           </Grow>
-        ))};
-        {/* Conditionally applies the timeout prop to change the entry speed. */}
-        {/* <Grow
-          in={checked}
-          style={{ transformOrigin: "0 0 0" }}
-          {...(checked ? { timeout: 1000 } : {})}
-        >
-          <Paper elevation={4} className={classes.paper}>
-            <div className="project-tile">Hello</div>
-          </Paper>
-        </Grow>
-        <Grow
-          in={checked}
-          style={{ transformOrigin: "0 0 0" }}
-          {...(checked ? { timeout: 1000 } : {})}
-        >
-          <Paper elevation={4} className={classes.paper}>
-            <div className="project-tile">Hello</div>
-          </Paper>
-        </Grow> */}
+        ))}
       </div>
     </div>
   );
