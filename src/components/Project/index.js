@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
   // },
 }));
 
-export default function SimpleGrow({projects}) {
+export default function SimpleGrow({ projects }) {
   const classes = useStyles();
   const [checked, setChecked] = React.useState(true);
 
@@ -42,25 +42,27 @@ export default function SimpleGrow({projects}) {
         label="Show"
       /> */}
       <div className={classes.container}>
-        <Grow in={checked}>
-          <Paper elevation={4} className={classes.paper}>
-            <div className="project-tile">
-              <h3>{projects[0].name}</h3>
-              <p>{projects[0].description}</p>
-              <div className="fill">
-                <img
-                  className="project-image"
-                  alt="Weather App"
-                  src={projects[0].image}
-                ></img>
+        {projects.map((project) => (
+          <Grow in={checked}>
+            <Paper elevation={4} className={classes.paper}>
+              <div className="project-tile">
+                <h3>{project.name}</h3>
+                <p>{project.description}</p>
+                <div className="fill">
+                  <img
+                    className="project-image"
+                    alt="Weather App"
+                    src={project.image}
+                  ></img>
+                </div>
+                <a>Link 1: {project.appLink}</a>
+                <a>Link 2: {project.repoLink}</a>
               </div>
-              <a>Link 1: {projects[0].appLink}</a>
-              <a>Link 2: {projects[0].repoLink}</a>
-            </div>
-          </Paper>
-        </Grow>
+            </Paper>
+          </Grow>
+        ))};
         {/* Conditionally applies the timeout prop to change the entry speed. */}
-        <Grow
+        {/* <Grow
           in={checked}
           style={{ transformOrigin: "0 0 0" }}
           {...(checked ? { timeout: 1000 } : {})}
@@ -69,7 +71,6 @@ export default function SimpleGrow({projects}) {
             <div className="project-tile">Hello</div>
           </Paper>
         </Grow>
-
         <Grow
           in={checked}
           style={{ transformOrigin: "0 0 0" }}
@@ -78,7 +79,7 @@ export default function SimpleGrow({projects}) {
           <Paper elevation={4} className={classes.paper}>
             <div className="project-tile">Hello</div>
           </Paper>
-        </Grow>
+        </Grow> */}
       </div>
     </div>
   );
