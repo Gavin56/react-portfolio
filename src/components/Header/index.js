@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function FullWidthTabs() {
+export default function FullWidthTabs({projects}) {
   const classes = useStyles();
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
@@ -92,7 +92,7 @@ export default function FullWidthTabs() {
           <Header value={value} index={1} dir={theme.direction}>
             Portfolio
             {/* Summon page here */}
-            <Project></Project>
+            <Project projects={projects}></Project>
           </Header>
           <Header value={value} index={2} dir={theme.direction}>
             Contact

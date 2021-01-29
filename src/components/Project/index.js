@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
   // },
 }));
 
-export default function SimpleGrow() {
+export default function SimpleGrow({projects}) {
   const classes = useStyles();
   const [checked, setChecked] = React.useState(true);
 
@@ -45,17 +45,17 @@ export default function SimpleGrow() {
         <Grow in={checked}>
           <Paper elevation={4} className={classes.paper}>
             <div className="project-tile">
-              <h3>Project Title</h3>
-              <p>Project Description</p>
+              <h3>{projects[0].name}</h3>
+              <p>{projects[0].description}</p>
               <div className="fill">
                 <img
                   className="project-image"
                   alt="Weather App"
-                  src="https://github.com/Gavin56/images/blob/main/Webp.net-resizeimage%20(1).png?raw=true"
+                  src={projects[0].image}
                 ></img>
               </div>
-              <a>Link 1</a>
-              <a>Link 2</a>
+              <a>Link 1: {projects[0].appLink}</a>
+              <a>Link 2: {projects[0].repoLink}</a>
             </div>
           </Paper>
         </Grow>
