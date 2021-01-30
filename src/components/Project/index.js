@@ -67,8 +67,7 @@ export default function SimpleGrow({ projects }) {
                 </CardContent>
               </CardActionArea>
               <CardActions>
-                <Button className="btn" size="small" href={project.appLink}>Deployed Application</Button>
-                <Button className="btn" size="small" href={project.repoLink}>Github Repo</Button>
+                <Button project={project}></Button>
               </CardActions>
             </Card>
           </Grow>
