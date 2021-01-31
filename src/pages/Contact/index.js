@@ -38,7 +38,7 @@ function Contact() {
     <div>
       <Header value={2}></Header>
       <Container className={classes.container}>
-        <Paper className={classes.paper}>
+        <Paper elevation={7} className={classes.paper}>
           <form noValidate autoComplete="off">
             <h1>Let's have a chat.</h1>
             <Container>
