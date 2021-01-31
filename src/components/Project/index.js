@@ -17,10 +17,9 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     marginTop: 50,
   },
-  paper: {
-    padding: theme.spacing(3),
+  card: {
+    padding: theme.spacing(2),
     textAlign: "center",
-    color: theme.palette.text.secondary,
   },
 }));
 
@@ -34,7 +33,7 @@ export default function SimpleGrow({project}) {
     style={{ transformOrigin: "0 0 0" }}
     {...(checked ? { timeout: 1000 } : {})}
   >
-    <Card elevation={4}>
+    <Card elevation={4} className={classes.card}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -60,7 +59,7 @@ export default function SimpleGrow({project}) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button></Button>
+        <Button project={project}></Button>
       </CardActions>
     </Card>
     </Grow>
