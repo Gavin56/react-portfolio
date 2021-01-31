@@ -13,24 +13,23 @@ function About() {
       "& > *": {
         margin: theme.spacing(1),
         width: "100%",
-        background: "#230a2b",
-        border: 1,
-        borderStyle: "solid",
-        borderColor: "teal",
+        // background: "#230a2b",
+        paddingBottom: 50,
       },
     },
     paper: {
-      color: "white",
+      // color: "white",
     },
     image: {
-      height: 540,
+      height: 450,
       borderRadius: 50,
       float: "left",
       marginRight: 50,
       marginLeft: 50,
+      marginTop: 50
     },
     about: {
-      color: "white",
+      // color: "white",
       marginTop: 100
     },
     fontFamily: "Chivo",
@@ -41,7 +40,7 @@ function About() {
   return (
     <div>
       <Header value={0} />
-      <Paper className={classes.root} variant="outlined">
+      <Paper elevation={6} className={classes.root}>
         <div>
           <h1 className={classes.paper}>
             Hello, I'm Gavin. Thank you for checking out my work.
