@@ -14,6 +14,9 @@ function Contact() {
         width: "25ch",
       },
     },
+    h1:{
+      marginTop: 20,
+    },
     paper: {
       marginTop: 30,
       width: 500,
@@ -29,7 +32,6 @@ function Contact() {
     },
      message: {
       marginTop: 50,
-      
      }
   }));
 
@@ -40,7 +42,7 @@ function Contact() {
       <Container className={classes.container}>
         <Paper elevation={7} className={classes.paper}>
           <form noValidate autoComplete="off">
-            <h1>Let's have a chat.</h1>
+            <h1 className={classes.h1}>Let's have a chat.</h1>
             <Container>
               <TextField
                 className={classes.textField}

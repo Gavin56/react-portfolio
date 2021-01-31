@@ -1,6 +1,5 @@
 import "./App.css";
 import React from "react";
-// import projects from "./utils/JSON";
 import Particle from "./components/Particles";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import About from "./pages/About";
@@ -20,6 +19,7 @@ function App() {
         }}
       >
         <Particle />
+
         <div
           style={{
             position: "absolute",
@@ -29,7 +29,6 @@ function App() {
             height: "100%",
           }}
         >
-
           {/* You can render <Route> and <NavTabs /> here */}
           <Route exact path="/" component={About} />
           <Route exact path="/contact" component={Contact} />

@@ -3,7 +3,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Container from "../Container/index";
 import Project from "../Project/index";
-import Grow from "@material-ui/core/Grow";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,33 +32,4 @@ export default function AutoGrid({ projects }) {
       </Container>
     </div>
   );
-}
-
-{
-  /* <Grid item xs>
-          <Paper className={classes.paper}>
-
-          </Paper>
-        </Grid>
-        <Grid item xs>
-          <Paper className={classes.paper}>
-
-          </Paper>
-        </Grid>
-      </Grid>
-      <Grid container spacing={5}>
-        <Grid item xs>
-          <Paper className={classes.paper}>
-          </Paper>
-        </Grid>
-        <Grid item xs>
-          <Paper className={classes.paper}>
-
-          </Paper>
-        </Grid>
-        <Grid item xs>
-          <Paper className={classes.paper}>
-
-          </Paper>
-        </Grid> */
 }

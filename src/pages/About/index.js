@@ -1,7 +1,6 @@
 import { makeStyles, withTheme } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import "./style.css";
-import Particles from "react-tsparticles";
 import Header from "../../components/Header/index";
 import Container from "../../components/Container/index";
 
@@ -13,12 +12,13 @@ function About() {
       "& > *": {
         margin: theme.spacing(1),
         width: "100%",
-        // background: "#230a2b",
         paddingBottom: 50,
       },
     },
-    paper: {
-      // color: "white",
+    h1: {
+      marginLeft: 50,
+      marginTop: 50,
+      color: "white",
     },
     image: {
       height: 450,
@@ -26,11 +26,17 @@ function About() {
       float: "left",
       marginRight: 50,
       marginLeft: 50,
-      marginTop: 50
+      marginTop: 50,
     },
     about: {
-      // color: "white",
-      marginTop: 100
+      marginTop: 100,
+      color: "white",
+    },
+    contactInfo: {
+      color: "white",
+      marginTop: 40,
+      marginRight: 100,
+      float: "left",
     },
     fontFamily: "Chivo",
   }));
@@ -40,17 +46,20 @@ function About() {
   return (
     <div>
       <Header value={0} />
-      <Paper elevation={6} className={classes.root}>
-        <div>
-          <h1 className={classes.paper}>
-            Hello, I'm Gavin. Thank you for checking out my work.
-          </h1>
-          <img
-            className={classes.image}
-            src="https://lh3.googleusercontent.com/pw/ACtC-3f8UlBk_doTYMrS7x07jLtCn6D2e2I7LVeKy0j1a8px4Y_iYm8163EZsBE1sqZu8R_8v1SD0rFZv1Zn6nCa0jEbAEcwu6JOExetuQX5390qPvDC1EEE_ojFmTHia-zlyw4ipcDcm-OmCSG46-M8u0L_=w675-h899-no?authuser=0"
-            alt="Me, sitting"
-          ></img>
-          <Container>
+      {/* <Paper elevation={6} className={classes.root}> */}
+      <div>
+        <h1 className={classes.h1}>
+          Hello, I'm Gavin. Thank you for checking out my work.
+        </h1>
+
+        <img
+          className={classes.image}
+          src="https://lh3.googleusercontent.com/pw/ACtC-3f8UlBk_doTYMrS7x07jLtCn6D2e2I7LVeKy0j1a8px4Y_iYm8163EZsBE1sqZu8R_8v1SD0rFZv1Zn6nCa0jEbAEcwu6JOExetuQX5390qPvDC1EEE_ojFmTHia-zlyw4ipcDcm-OmCSG46-M8u0L_=w675-h899-no?authuser=0"
+          alt="Me, sitting"
+        ></img>
+
+        <Container>
+          <div>
             <p className={classes.about}>
               My name is Gavin O'Brien. I was born and raised in New Jersey. I
               currently have an Associate's Degree from Bergen Community college
@@ -58,15 +67,44 @@ function About() {
               during the Covid-19 pandemic. I am an aspiring web devloper and
               genuinely enjoy studying the anatomy and functionality of
               computers.
+
               <br /> <br />
+
               Some of my hobbies include playing video games and board games,
-              drawing, biking, hiking, and weight-training. I'm very much a dog
-              person as I own two dogs, a French bulldog and an English bulldog.
-              I hope to make a career out of web development one day!
+              drawing, biking, hiking, and weight-training. I recently
+              discovered a newfound passion in coding and now I hope to make a
+              career out of web development one day.
             </p>
-          </Container>
-        </div>
-      </Paper>
+
+            <p className={classes.contactInfo}>
+              <strong>Find me on social media:</strong>
+
+              <br/>
+
+              <a href="https://github.com/Gavin56">Github Profile</a>
+
+              <br/>
+
+              <a href="https://www.linkedin.com/in/gavin-o-brien-6829a61b4/">
+                LinkedIn Profile
+              </a>
+            </p>
+
+            <p className={classes.contactInfo}>
+              <strong>Contact me directly:</strong>
+
+              <br />
+
+              GavinOBrien56@gmail.com
+              
+              <br />
+
+              (201) 414-6122
+            </p>
+          </div>
+        </Container>
+      </div>
+      {/* </Paper> */}
     </div>
   );
 }

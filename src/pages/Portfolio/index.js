@@ -1,6 +1,7 @@
 import Header from "../../components/Header/index";
 import Grid from "../../components/Grid/index";
 import projects from "../../utils/JSON";
+import "./style.css";
 
 function Portfolio() {
   return (
