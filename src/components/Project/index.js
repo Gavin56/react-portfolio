@@ -9,7 +9,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "../Button/index";
 import Typography from "@material-ui/core/Typography";
-import Grow from "@material-ui/core/Grow"
+import Grow from "@material-ui/core/Grow";
 import "./style.css";
 
 const useStyles = makeStyles((theme) => ({
@@ -32,7 +32,7 @@ export default function SimpleGrow({project}) {
     in={checked}
     style={{ transformOrigin: "0 0 0" }}
     {...(checked ? { timeout: 1000 } : {})}
-  >
+    >
     <Card elevation={4} className={classes.card}>
       <CardActionArea>
         <CardMedia
