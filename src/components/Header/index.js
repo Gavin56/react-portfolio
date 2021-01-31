@@ -8,7 +8,10 @@ import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import Project from "../Project/index";
-import Container from "../Container/index"
+import Container from "../Container/index";
+import About from "../About/index";
+import Particles from "react-tsparticles";
+import "./style.css";
 
 function Header(props) {
   const { children, value, index, ...other } = props;
@@ -44,12 +47,12 @@ function a11yProps(index) {
 }
 
 const useStyles = makeStyles((theme) => ({
-  root:{
+  root: {
     background: "#230a2b",
   },
 }));
 
-export default function FullWidthTabs({projects}) {
+export default function FullWidthTabs({ projects }) {
   const classes = useStyles();
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
@@ -64,7 +67,7 @@ export default function FullWidthTabs({projects}) {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" color="default">
+      <AppBar className="appBar" position="static" color="default">
         <Tabs
           value={value}
           onChange={handleChange}
@@ -78,7 +81,7 @@ export default function FullWidthTabs({projects}) {
           <Tab label="Contact" {...a11yProps(2)} />
         </Tabs>
       </AppBar>
-      
+
       <Container>
         <SwipeableViews
           axis={theme.direction === "rtl" ? "x-reverse" : "x"}
@@ -86,8 +89,8 @@ export default function FullWidthTabs({projects}) {
           onChangeIndex={handleChangeIndex}
         >
           <Header value={value} index={0} dir={theme.direction}>
-            About
             {/* Summon page here */}
+            <About></About>
           </Header>
           <Header value={value} index={1} dir={theme.direction}>
             Portfolio
@@ -100,6 +103,7 @@ export default function FullWidthTabs({projects}) {
           </Header>
         </SwipeableViews>
       </Container>
+      {/* </Particles> */}
     </div>
   );
 }
