@@ -36,7 +36,7 @@ function Contact() {
   const classes = useStyles();
   return (
     <div>
-      <Header></Header>
+      <Header value={2}></Header>
       <Container className={classes.container}>
         <Paper className={classes.paper}>
           <form noValidate autoComplete="off">

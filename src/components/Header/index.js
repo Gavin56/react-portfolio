@@ -14,30 +14,30 @@ import Particles from "react-tsparticles";
 import "./style.css";
 
 function Header(props) {
-  const { children, value, index, ...other } = props;
+  // const { children, value, index, ...other } = props;
 
   return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`full-width-tabpanel-${index}`}
-      aria-labelledby={`full-width-tab-${index}`}
-      {...other}
-    >
-      {value === index && (
+    // <div
+    //   role="tabpanel"
+    //   hidden={value !== index}
+    //   id={`full-width-tabpanel-${index}`}
+    //   aria-labelledby={`full-width-tab-${index}`}
+    //   {...other}
+    // >
+      {/* {value === index && (
         <Box p={3}>
           <Typography>{children}</Typography>
         </Box>
-      )}
-    </div>
+      )} */}
+    // </div>
   );
 }
 
-Header.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.any.isRequired,
-  value: PropTypes.any.isRequired,
-};
+// Header.propTypes = {
+//   children: PropTypes.node,
+//   index: PropTypes.any.isRequired,
+//   value: PropTypes.any.isRequired,
+// };
 
 function a11yProps(index) {
   return {
@@ -52,24 +52,24 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function FullWidthTabs({ projects }) {
+export default function FullWidthTabs({value}) {
   const classes = useStyles();
   const theme = useTheme();
-  const [value, setValue] = React.useState(0);
+  // const [value, setValue] = React.useState(0);
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
+  // const handleChange = (event, newValue) => {
+  //   setValue(newValue);
+  // };
 
-  const handleChangeIndex = (index) => {
-    setValue(index);
-  };
+  // const handleChangeIndex = (index) => {
+  //   setValue(index);
+  // };
 
   return (
       <AppBar className="appBar" position="static" color="default">
         <Tabs
           value={value}
-          onChange={handleChange}
+          // onChange={handleChange}
           indicatorColor="primary"
           textColor="primary"
           variant="centered"
