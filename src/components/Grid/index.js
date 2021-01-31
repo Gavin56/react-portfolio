@@ -7,6 +7,8 @@ import Project from '../Project/index';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    border: 1,
+    borderColor: "teal"
   },
   paper: {
     padding: theme.spacing(2),
