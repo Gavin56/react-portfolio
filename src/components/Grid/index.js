@@ -1,33 +1,65 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
-import Project from '../Project/index';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Grid from "@material-ui/core/Grid";
+import Container from "../Container/index";
+import Project from "../Project/index";
+import Grow from "@material-ui/core/Grow";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    border: 1,
-    borderColor: "teal"
+    marginTop: 50,
   },
   paper: {
-    padding: theme.spacing(2),
-    textAlign: 'center',
+    padding: theme.spacing(3),
+    textAlign: "center",
     color: theme.palette.text.secondary,
   },
 }));
 
-export default function CenteredGrid() {
+export default function AutoGrid({ projects }) {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={3}>
-          
-        <Grid item xs={4}>
-            <Project></Project>
+      <Container>
+        <Grid container spacing={5}>
+          {projects.map((project) => (
+            <Grid item xs>
+              <Project project={project}></Project>
+            </Grid>
+          ))}
         </Grid>
-      </Grid>
+      </Container>
     </div>
   );
+}
+
+{
+  /* <Grid item xs>
+          <Paper className={classes.paper}>
+
+          </Paper>
+        </Grid>
+        <Grid item xs>
+          <Paper className={classes.paper}>
+
+          </Paper>
+        </Grid>
+      </Grid>
+      <Grid container spacing={5}>
+        <Grid item xs>
+          <Paper className={classes.paper}>
+          </Paper>
+        </Grid>
+        <Grid item xs>
+          <Paper className={classes.paper}>
+
+          </Paper>
+        </Grid>
+        <Grid item xs>
+          <Paper className={classes.paper}>
+
+          </Paper>
+        </Grid> */
 }
