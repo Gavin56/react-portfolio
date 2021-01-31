@@ -66,7 +66,6 @@ export default function FullWidthTabs({ projects }) {
   };
 
   return (
-    <div className={classes.root}>
       <AppBar className="appBar" position="static" color="default">
         <Tabs
           value={value}
@@ -76,33 +75,31 @@ export default function FullWidthTabs({ projects }) {
           variant="centered"
           aria-label="full width tabs example"
         >
-          <Tab label="About" {...a11yProps(0)} />
-          <Tab label="Portfolio" {...a11yProps(1)} />
-          <Tab label="Contact" {...a11yProps(2)} />
+          <Tab href="/" label="About" {...a11yProps(0)} />
+          <Tab href="/portfolio" label="Portfolio" {...a11yProps(1)} />
+          <Tab href="/contact" label="Contact" {...a11yProps(2)} />
         </Tabs>
-      </AppBar>
-
-      <Container>
-        <SwipeableViews
-          axis={theme.direction === "rtl" ? "x-reverse" : "x"}
-          index={value}
-          onChangeIndex={handleChangeIndex}
-        >
-          <Header value={value} index={0} dir={theme.direction}>
-            {/* Summon page here */}
-          </Header>
-          <Header value={value} index={1} dir={theme.direction}>
-            Portfolio
-            {/* Summon page here */}
-            <Project projects={projects}></Project>
-          </Header>
-          <Header value={value} index={2} dir={theme.direction}>
-            Contact
-            {/* Summon page here */}
-          </Header>
-        </SwipeableViews>
-      </Container>
-      {/* </Particles> */}
-    </div>
+      </AppBar> 
   );
 }
+
+// <Container>
+// <SwipeableViews
+//   axis={theme.direction === "rtl" ? "x-reverse" : "x"}
+//   index={value}
+//   onChangeIndex={handleChangeIndex}
+// >
+//   <Header value={value} index={0} dir={theme.direction}>
+//     {/* Summon page here */}
+//   </Header>
+//   <Header value={value} index={1} dir={theme.direction}>
+//     Portfolio
+//     {/* Summon page here */}
+//     <Project projects={projects}></Project>
+//   </Header>
+//   <Header value={value} index={2} dir={theme.direction}>
+//     Contact
+//     {/* Summon page here */}
+//   </Header>
+// </SwipeableViews>
+// </Container>
