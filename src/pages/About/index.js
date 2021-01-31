@@ -39,7 +39,6 @@ function About() {
   return (
       <div>
       <Header/>
-
         <Paper className={classes.root} variant="outlined">
           <div>
             <h1 className={classes.paper}>
