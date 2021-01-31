@@ -9,7 +9,7 @@ import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import Project from "../Project/index";
 import Container from "../Container/index";
-import About from "../About/index";
+import About from "../../pages/About/index";
 import Particles from "react-tsparticles";
 import "./style.css";
 
@@ -90,7 +90,6 @@ export default function FullWidthTabs({ projects }) {
         >
           <Header value={value} index={0} dir={theme.direction}>
             {/* Summon page here */}
-            <About></About>
           </Header>
           <Header value={value} index={1} dir={theme.direction}>
             Portfolio
