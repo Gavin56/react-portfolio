@@ -3,6 +3,9 @@ import Grow from "@material-ui/core/Grow";
 import Header from "../../components/Header/index";
 import Footer from "../../components/Footer/index";
 import Container from "../../components/Container/index";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import IconButton from "@material-ui/core/IconButton";
+import GitHubIcon from "@material-ui/icons/GitHub";
 
 function About() {
   const useStyles = makeStyles((theme) => ({
@@ -79,19 +82,25 @@ function About() {
                 career out of web development one day.
               </p>
 
-              <p className={classes.contactInfo}>
+              <div className={classes.contactInfo}>
                 <strong>Find me on social media:</strong>
-
                 <br />
-
-                <a href="https://github.com/Gavin56">Github Profile</a>
-
+                <IconButton
+                  aria-label="github"
+                  href="https://github.com/Gavin56"
+                  color="primary"
+                >
+                  <GitHubIcon></GitHubIcon>
+                </IconButton>
                 <br />
-
-                <a href="https://www.linkedin.com/in/gavin-o-brien-6829a61b4/">
-                  LinkedIn Profile
-                </a>
-              </p>
+                  <IconButton
+                    aria-label="linkedin"
+                    color="primary"
+                    href="https://www.linkedin.com/in/gavin-o-brien-6829a61b4/"
+                  >
+                    <LinkedInIcon></LinkedInIcon>
+                  </IconButton>
+              </div>
 
               <p className={classes.contactInfo}>
                 <strong>Contact me directly:</strong>
