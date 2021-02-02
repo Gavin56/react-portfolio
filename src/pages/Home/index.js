@@ -23,7 +23,7 @@ function About() {
       fontFamily: "Mukta",
     },
     image: {
-      height: 450,
+      height: 415,
       borderRadius: 50,
       float: "left",
       marginRight: 50,

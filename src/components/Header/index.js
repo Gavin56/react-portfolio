@@ -13,6 +13,7 @@ import Contact from "../../pages/Contact/index";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import IconButton from "@material-ui/core/IconButton";
 import GitHubIcon from "@material-ui/icons/GitHub";
+import Button from "@material-ui/core/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function TabPanel(props) {
@@ -59,7 +60,6 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "30%",
     marginTop: 10,
     color: "white",
-    fontFamily: "Montserrat Alternates",
   },
 }));
 
@@ -95,9 +95,11 @@ export default function FullWidthTabs() {
           <Tab className={classes.tab} label="Contact" {...a11yProps(2)} />
 
           <div className={classes.nav}>
-            <h1 style={{float:"left"}}>Gavin O'Brien</h1>
+            <h1 style={{ float: "left", fontFamily: "Montserrat Alternates" }}>
+              Gavin O'Brien
+            </h1>
 
-            <div style={{float:"left", marginLeft:50}}>
+            <div style={{ float: "left", marginLeft: 50 }}>
               <IconButton
                 aria-label="github"
                 href="https://github.com/Gavin56"
@@ -113,6 +115,21 @@ export default function FullWidthTabs() {
               >
                 <LinkedInIcon></LinkedInIcon>
               </IconButton>
+              <Button
+                variant="outlined"
+                color="primary"
+                size="small"
+                style={{ marginLeft: 10 }}
+              >
+                <a
+                  style={{
+                    textDecoration: "none",
+                  }}
+                  href="https://drive.google.com/file/d/16iPBQwg1EaKFSzm4a0Q-4eB7Q0s6cKND/view?usp=sharing"
+                >
+                  Resume
+                </a>
+              </Button>
             </div>
           </div>
         </Tabs>
