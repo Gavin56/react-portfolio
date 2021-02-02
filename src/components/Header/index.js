@@ -1,15 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import SwipeableViews from 'react-swipeable-views';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
+import React from "react";
+import PropTypes from "prop-types";
+import SwipeableViews from "react-swipeable-views";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+import AppBar from "@material-ui/core/AppBar";
+import Tabs from "@material-ui/core/Tabs";
+import Tab from "@material-ui/core/Tab";
+import Typography from "@material-ui/core/Typography";
+import Box from "@material-ui/core/Box";
 import About from "../../pages/Home/index";
 import Portfolio from "../../pages/Portfolio/index";
 import Contact from "../../pages/Contact/index";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -40,15 +41,21 @@ TabPanel.propTypes = {
 function a11yProps(index) {
   return {
     id: `full-width-tab-${index}`,
-    'aria-controls': `full-width-tabpanel-${index}`,
+    "aria-controls": `full-width-tabpanel-${index}`,
   };
 }
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: theme.palette.background.paper,
-    width: 500,
+    width: "100%",
   },
+  tab: {
+    color: "white",
+  },
+  h1: {
+    marginLeft: "30%",
+    color: "white"
+  }
 }));
 
 export default function FullWidthTabs() {
@@ -66,20 +73,27 @@ export default function FullWidthTabs() {
 
   return (
     <div>
-      <AppBar position="static" color="default">
+      <AppBar
+        style={{ background: "transparent" }}
+        elevation={0}
+        position="static"
+        color="default"
+      >
         <Tabs
           value={value}
           onChange={handleChange}
           indicatorColor="primary"
           textColor="primary"
         >
-          <Tab label="Item One" {...a11yProps(0)} />
-          <Tab label="Item Two" {...a11yProps(1)} />
-          <Tab label="Item Three" {...a11yProps(2)} />
+          <Tab className={classes.tab} label="Home" {...a11yProps(0)} />
+          <Tab className={classes.tab} label="Portfolio" {...a11yProps(1)} />
+          <Tab className={classes.tab} label="Contact" {...a11yProps(2)} />
+
+          <h1 className={classes.h1}>Gavin O'Brien</h1>
         </Tabs>
       </AppBar>
       <SwipeableViews
-        axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+        axis={theme.direction === "rtl" ? "x-reverse" : "x"}
         index={value}
         onChangeIndex={handleChangeIndex}
       >
