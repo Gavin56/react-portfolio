@@ -16,6 +16,7 @@ function Contact() {
     },
     h1: {
       marginTop: 20,
+      fontFamily: "Mukta",
     },
     paper: {
       marginTop: 30,

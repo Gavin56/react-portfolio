@@ -1,10 +1,9 @@
 import { makeStyles } from "@material-ui/core/styles";
 import Grow from "@material-ui/core/Grow";
-import Footer from "../../components/Footer/index";
 import Container from "../../components/Container/index";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import Paper from "@material-ui/core/Paper";
 import IconButton from "@material-ui/core/IconButton";
-import GitHubIcon from "@material-ui/icons/GitHub";
+import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
 
 function About() {
   const useStyles = makeStyles((theme) => ({
@@ -21,6 +20,7 @@ function About() {
       marginLeft: 50,
       marginTop: 50,
       color: "white",
+      fontFamily: "Mukta",
     },
     image: {
       height: 450,
@@ -33,14 +33,22 @@ function About() {
     about: {
       marginTop: 100,
       color: "white",
+      fontSize: 20,
+      fontFamily: "Mukta",
     },
     contactInfo: {
       color: "white",
       marginTop: 40,
       marginRight: 100,
       float: "left",
+      fontFamily: "Mukta",
     },
     fontFamily: "Chivo",
+    paper: {
+      height: 670,
+      paddingTop: 15,
+      background: "rgba(0,0,0,.3)",
+    },
   }));
 
   const classes = useStyles();
@@ -53,63 +61,52 @@ function About() {
         style={{ transformOrigin: "0 0 0" }}
         {...(checked ? { timeout: 1000 } : {})}
       >
-        <div>
-          <h1 className={classes.h1}>
-            Hello, I'm Gavin. Thank you for checking out my work.
-          </h1>
+        <Paper className={classes.paper}>
+          <div>
+            <h1 className={classes.h1}>
+              Welcome. Thank you for checking out my work.
+            </h1>
 
-          <img
-            className={classes.image}
-            src="https://lh3.googleusercontent.com/pw/ACtC-3f8UlBk_doTYMrS7x07jLtCn6D2e2I7LVeKy0j1a8px4Y_iYm8163EZsBE1sqZu8R_8v1SD0rFZv1Zn6nCa0jEbAEcwu6JOExetuQX5390qPvDC1EEE_ojFmTHia-zlyw4ipcDcm-OmCSG46-M8u0L_=w675-h899-no?authuser=0"
-            alt="Me, sitting"
-          ></img>
+            <img
+              className={classes.image}
+              src="https://lh3.googleusercontent.com/pw/ACtC-3f8UlBk_doTYMrS7x07jLtCn6D2e2I7LVeKy0j1a8px4Y_iYm8163EZsBE1sqZu8R_8v1SD0rFZv1Zn6nCa0jEbAEcwu6JOExetuQX5390qPvDC1EEE_ojFmTHia-zlyw4ipcDcm-OmCSG46-M8u0L_=w675-h899-no?authuser=0"
+              alt="Me, sitting"
+            ></img>
 
-          <Container>
-            <div>
-              <p className={classes.about}>
-                My name is Gavin O'Brien. I was born and raised in New Jersey. I
-                currently have an Associate's Degree from Bergen Community
-                college and I'm currently employed at Trader Joe's while I study
-                from home during the Covid-19 pandemic. I am an aspiring web
-                devloper and genuinely enjoy studying the anatomy and
-                functionality of computers.
-                <br /> <br />
-                Some of my hobbies include playing video games and board games,
-                drawing, biking, hiking, and weight-training. I recently
-                discovered a newfound passion in coding and now I hope to make a
-                career out of web development one day.
-              </p>
-
-              <div className={classes.contactInfo}>
-                <strong>Find me on social media:</strong>
-                <br />
-                <IconButton
-                  aria-label="github"
-                  href="https://github.com/Gavin56"
+            <Container>
+              <div>
+                <p className={classes.about}>
+                  My name is Gavin O'Brien. I was born and raised in New Jersey.
+                  I currently have an Associate's Degree from Bergen Community
+                  college and will be attending the New Jersey Institute of
+                  Technology in the Fall. I am an aspiring web developer with
+                  great interest in developing apps that are equally aesthetic
+                  as they are functional.
+                  <br />
+                  <br /> <br />
+                  {/* Check out some of my applications over here:
+                <IconButton>
+                  <DoubleArrowIcon
                   color="primary"
-                >
-                  <GitHubIcon></GitHubIcon>
-                </IconButton>
-                <br />
-                  <IconButton
-                    aria-label="linkedin"
-                    color="primary"
-                    href="https://www.linkedin.com/in/gavin-o-brien-6829a61b4/"
+                  fontSize="large"
                   >
-                    <LinkedInIcon></LinkedInIcon>
-                  </IconButton>
-              </div>
+                  </DoubleArrowIcon>
+                </IconButton> */}
+                </p>
 
-              <p className={classes.contactInfo}>
-                <strong>Contact me directly:</strong>
-                <br />
-                GavinOBrien56@gmail.com
-                <br />
-                (201) 414-6122
-              </p>
-            </div>
-          </Container>
-        </div>
+                <p className={classes.contactInfo}>
+                  <strong style={{ fontStyle: "italic", fontSize: 20 }}>
+                    Contact me:
+                  </strong>
+                  <br />
+                  GavinOBrien56@gmail.com
+                  <br />
+                  (201) 414-6122
+                </p>
+              </div>
+            </Container>
+          </div>
+        </Paper>
       </Grow>
     </div>
   );

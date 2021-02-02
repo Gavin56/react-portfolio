@@ -7,9 +7,12 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
-import About from "../../pages/Home/index";
+import Home from "../../pages/Home/index";
 import Portfolio from "../../pages/Portfolio/index";
 import Contact from "../../pages/Contact/index";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import IconButton from "@material-ui/core/IconButton";
+import GitHubIcon from "@material-ui/icons/GitHub";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function TabPanel(props) {
@@ -52,10 +55,12 @@ const useStyles = makeStyles((theme) => ({
   tab: {
     color: "white",
   },
-  h1: {
+  nav: {
     marginLeft: "30%",
-    color: "white"
-  }
+    marginTop: 10,
+    color: "white",
+    fontFamily: "Montserrat Alternates",
+  },
 }));
 
 export default function FullWidthTabs() {
@@ -89,7 +94,27 @@ export default function FullWidthTabs() {
           <Tab className={classes.tab} label="Portfolio" {...a11yProps(1)} />
           <Tab className={classes.tab} label="Contact" {...a11yProps(2)} />
 
-          <h1 className={classes.h1}>Gavin O'Brien</h1>
+          <div className={classes.nav}>
+            <h1 style={{float:"left"}}>Gavin O'Brien</h1>
+
+            <div style={{float:"left", marginLeft:50}}>
+              <IconButton
+                aria-label="github"
+                href="https://github.com/Gavin56"
+                color="primary"
+              >
+                <GitHubIcon></GitHubIcon>
+              </IconButton>
+
+              <IconButton
+                aria-label="linkedin"
+                color="primary"
+                href="https://www.linkedin.com/in/gavin-o-brien-6829a61b4/"
+              >
+                <LinkedInIcon></LinkedInIcon>
+              </IconButton>
+            </div>
+          </div>
         </Tabs>
       </AppBar>
       <SwipeableViews
@@ -98,7 +123,7 @@ export default function FullWidthTabs() {
         onChangeIndex={handleChangeIndex}
       >
         <TabPanel value={value} index={0} dir={theme.direction}>
-          <About></About>
+          <Home></Home>
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
           <Portfolio></Portfolio>
