@@ -1,6 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles";
 import Grow from "@material-ui/core/Grow";
-import Header from "../../components/Header/index";
 import Footer from "../../components/Footer/index";
 import Container from "../../components/Container/index";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
@@ -49,7 +48,6 @@ function About() {
 
   return (
     <div>
-      <Header value={0} />
       <Grow
         in={checked}
         style={{ transformOrigin: "0 0 0" }}
@@ -113,7 +111,6 @@ function About() {
           </Container>
         </div>
       </Grow>
-      <Footer></Footer>
     </div>
   );
 }
