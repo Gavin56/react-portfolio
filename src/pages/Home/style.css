@@ -1,0 +1,63 @@
+/* Medium screens and up */
+@media only screen and (min-width: 776px) {
+  #paper {
+    height: 100%;
+    padding-top: 15px;
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  #contact-info {
+    float: left;
+  }
+
+  #my-photo {
+    float: left;
+    height: 415px;
+    border-radius: 50px;
+    float: left;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-top: 50px;
+  }
+
+  #about {
+    margin-top: 100px;
+    color: white;
+    font-size: 20px;
+    font-family: "Mukta";
+    float: "left";
+  }
+
+  h1 {
+    margin-left: 50px;
+    margin-top: 50px;
+    color: white;
+    font-family: "Mukta";
+  }
+}
+
+/* Smaller screens */
+@media only screen and (max-width: 776px) {
+  #paper {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  #my-photo {
+    height: 300px;
+    border-radius: 50px;
+  }
+
+  #image-div {
+    display: flex;
+    justify-content: center;
+  }
+
+  h1 {
+    color: white;
+    font-family: "Mukta";
+  }
+}

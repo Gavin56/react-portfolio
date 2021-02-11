@@ -5,6 +5,7 @@ import { makeStyles, withTheme } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import { Container } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
+import Grid from "@material-ui/core/Grid";
 
 function Contact() {
   const useStyles = makeStyles((theme) => ({
@@ -20,7 +21,6 @@ function Contact() {
     },
     paper: {
       marginTop: 30,
-      width: 500,
       height: 600,
       display: "flex",
       justifyContent: "center",
@@ -40,60 +40,62 @@ function Contact() {
   const checked = true;
 
   return (
-    <div>
+    <div style={{display:"flex", justifyContent:"center"}}>
       <Grow
         in={checked}
         style={{ transformOrigin: "0 0 0" }}
         {...(checked ? { timeout: 1000 } : {})}
       >
-        <Container className={classes.container}>
-          <Paper elevation={7} className={classes.paper}>
-            <form noValidate autoComplete="off">
-              <h1 className={classes.h1}>Let's have a chat.</h1>
-              <Container>
-                <TextField
-                  className={classes.textField}
-                  id="outlined-primary"
-                  label="Name"
-                  variant="outlined"
-                  color="primary"
-                  fullWidth="true"
-                />
-              </Container>
-              <Container>
-                <TextField
-                  className={classes.textField}
-                  id="outlined-primary"
-                  label="Email"
-                  variant="outlined"
-                  color="primary"
-                  fullWidth="true"
-                />
-              </Container>
-              <Container>
-                <TextField
-                  className={classes.message}
-                  id="outlined-primary"
-                  label="Message"
-                  variant="outlined"
-                  color="primary"
-                  fullWidth="true"
-                  multiline="true"
-                  rows="5"
-                />
-              </Container>
-              <Container>
-                <Button
-                  className={classes.button}
-                  variant="contained"
-                  color="primary"
-                >
-                  Send Message
-                </Button>
-              </Container>
-            </form>
-          </Paper>
-        </Container>
+        {/* <Container > */}
+          <Grid item xs={12} sm={4}>
+            <Paper elevation={7} className={classes.paper}>
+              <form noValidate autoComplete="off">
+                <h1 className={classes.h1}>Let's have a chat.</h1>
+                <Grid item xs={12}>
+                  <TextField
+                    className={classes.textField}
+                    id="outlined-primary"
+                    label="Name"
+                    variant="outlined"
+                    color="primary"
+                    fullWidth="true"
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <TextField
+                    className={classes.textField}
+                    id="outlined-primary"
+                    label="Email"
+                    variant="outlined"
+                    color="primary"
+                    fullWidth="true"
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <TextField
+                    className={classes.message}
+                    id="outlined-primary"
+                    label="Message"
+                    variant="outlined"
+                    color="primary"
+                    fullWidth="true"
+                    multiline="true"
+                    rows="5"
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <Button
+                    className={classes.button}
+                    variant="contained"
+                    color="primary"
+                  >
+                    Send Message
+                  </Button>
+                </Grid>
+              </form>
+            </Paper>
+          </Grid>
+        {/* </Container> */}
       </Grow>
       <Footer></Footer>
     </div>

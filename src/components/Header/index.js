@@ -14,6 +14,7 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import IconButton from "@material-ui/core/IconButton";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import Button from "@material-ui/core/Button";
+import Grid from "@material-ui/core/Grid";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function TabPanel(props) {
@@ -94,7 +95,7 @@ export default function FullWidthTabs() {
           <Tab className={classes.tab} label="Portfolio" {...a11yProps(1)} />
           <Tab className={classes.tab} label="Contact" {...a11yProps(2)} />
 
-          <div className={classes.nav}>
+          <Grid item xs={12} className={classes.nav}>
             <h1 style={{ float: "left", fontFamily: "Montserrat Alternates" }}>
               Gavin O'Brien
             </h1>
@@ -104,6 +105,7 @@ export default function FullWidthTabs() {
                 aria-label="github"
                 href="https://github.com/Gavin56"
                 color="primary"
+                target="blank"
               >
                 <GitHubIcon></GitHubIcon>
               </IconButton>
@@ -112,6 +114,7 @@ export default function FullWidthTabs() {
                 aria-label="linkedin"
                 color="primary"
                 href="https://www.linkedin.com/in/gavin-o-brien-6829a61b4/"
+                target="blank"
               >
                 <LinkedInIcon></LinkedInIcon>
               </IconButton>
@@ -120,18 +123,13 @@ export default function FullWidthTabs() {
                 color="primary"
                 size="small"
                 style={{ marginLeft: 10 }}
+                href="https://drive.google.com/file/d/16iPBQwg1EaKFSzm4a0Q-4eB7Q0s6cKND/view?usp=sharing"
+                target="blank"
               >
-                <a
-                  style={{
-                    textDecoration: "none",
-                  }}
-                  href="https://drive.google.com/file/d/16iPBQwg1EaKFSzm4a0Q-4eB7Q0s6cKND/view?usp=sharing"
-                >
-                  Resume
-                </a>
+                Resume
               </Button>
             </div>
-          </div>
+          </Grid>
         </Tabs>
       </AppBar>
       <SwipeableViews
