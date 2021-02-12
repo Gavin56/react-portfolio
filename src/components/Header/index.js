@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import SwipeableViews from "react-swipeable-views";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
-import useMediaQuery from '@material-ui/core/useMediaQuery';
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
@@ -58,11 +58,11 @@ const useStyles = makeStyles((theme) => ({
   tab: {
     color: "white",
   },
-  nav: {
-    marginLeft: "30%",
-    marginTop: 10,
-    color: "white",
-  },
+  // nav: {
+  //   marginLeft: "30%",
+  //   marginTop: 10,
+  //   color: "white",
+  // },
 }));
 
 export default function FullWidthTabs() {
@@ -78,7 +78,7 @@ export default function FullWidthTabs() {
     setValue(index);
   };
 
-  const mobileTabs = useMediaQuery('(max-width:600px)');
+  const mobileTabs = useMediaQuery("(max-width:600px)");
 
   return (
     <div>
@@ -88,53 +88,32 @@ export default function FullWidthTabs() {
         position="static"
         color="default"
       >
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          indicatorColor="primary"
-          textColor="primary"
-          variant={mobileTabs && "fullWidth"}
-        >
-          <Tab className={classes.tab} label="Home" {...a11yProps(0)} />
-          <Tab className={classes.tab} label="Portfolio" {...a11yProps(1)} />
-          <Tab className={classes.tab} label="Contact" {...a11yProps(2)} />
-
-          {/* <Grid item xs={12} className={classes.nav}>
-            <h1 style={{ float: "left", fontFamily: "Montserrat Alternates" }}>
+        <Grid container>
+          <Grid item xs={12} md={6}>
+            <Tabs
+              xs={12}
+              md={6}
+              value={value}
+              onChange={handleChange}
+              indicatorColor="primary"
+              textColor="primary"
+              variant={mobileTabs && "fullWidth"}
+            >
+              <Tab className={classes.tab} label="Home" {...a11yProps(0)} />
+              <Tab
+                className={classes.tab}
+                label="Portfolio"
+                {...a11yProps(1)}
+              />
+              <Tab className={classes.tab} label="Contact" {...a11yProps(2)} />
+            </Tabs>
+          </Grid>
+          <Grid item xs={12} md={6} className={classes.nav}>
+            <h1 style={{ textAlign: "center", marginTop: 15, fontFamily: "Montserrat Alternates" }}>
               Gavin O'Brien
             </h1>
-
-            <div style={{ float: "left", marginLeft: 50 }}>
-              <IconButton
-                aria-label="github"
-                href="https://github.com/Gavin56"
-                color="primary"
-                target="blank"
-              >
-                <GitHubIcon></GitHubIcon>
-              </IconButton>
-
-              <IconButton
-                aria-label="linkedin"
-                color="primary"
-                href="https://www.linkedin.com/in/gavin-o-brien-6829a61b4/"
-                target="blank"
-              >
-                <LinkedInIcon></LinkedInIcon>
-              </IconButton>
-              <Button
-                variant="outlined"
-                color="primary"
-                size="small"
-                style={{ marginLeft: 10 }}
-                href="https://drive.google.com/file/d/16iPBQwg1EaKFSzm4a0Q-4eB7Q0s6cKND/view?usp=sharing"
-                target="blank"
-              >
-                Resume
-              </Button>
-            </div>
-          </Grid> */}
-        </Tabs>
+          </Grid>
+        </Grid>
       </AppBar>
       <SwipeableViews
         axis={theme.direction === "rtl" ? "x-reverse" : "x"}
