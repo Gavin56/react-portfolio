@@ -3,7 +3,10 @@ import Grow from "@material-ui/core/Grow";
 import Container from "../../components/Container/index";
 import Paper from "@material-ui/core/Paper";
 import IconButton from "@material-ui/core/IconButton";
-import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import Button from "@material-ui/core/Button";
+// import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
 import "./style.css";
 
 function About() {
@@ -61,14 +64,50 @@ function About() {
                 </IconButton> */}
                 </p>
 
-                <div id="contact-info">
-                  <strong style={{ fontStyle: "italic", fontSize: 20 }}>
-                    Contact me:
-                  </strong>
-                  <br />
-                  GavinOBrien56@gmail.com
-                  <br />
-                  (201) 414-6122
+                <div id="contact-div">
+                  <div id="contact-info">
+                    <strong style={{ fontStyle: "italic", fontSize: 20 }}>
+                      Contact me:
+                    </strong>
+                    <br />
+                    GavinOBrien56@gmail.com
+                    <br />
+                    (201) 414-6122
+                  </div>
+                  <div
+                    id="contact-buttons"
+                  >
+                    <IconButton
+                      aria-label="github"
+                      href="https://github.com/Gavin56"
+                      color="primary"
+                    >
+                      <GitHubIcon></GitHubIcon>
+                    </IconButton>
+
+                    <IconButton
+                      aria-label="linkedin"
+                      color="primary"
+                      href="https://www.linkedin.com/in/gavin-o-brien-6829a61b4/"
+                    >
+                      <LinkedInIcon></LinkedInIcon>
+                    </IconButton>
+                    <Button
+                      variant="outlined"
+                      color="primary"
+                      size="small"
+                      style={{ marginLeft: 10 }}
+                    >
+                      <a
+                        style={{
+                          textDecoration: "none",
+                        }}
+                        href="https://drive.google.com/file/d/16iPBQwg1EaKFSzm4a0Q-4eB7Q0s6cKND/view?usp=sharing"
+                      >
+                        Resume
+                      </a>
+                    </Button>
+                  </div>
                 </div>
               </div>
             </Container>

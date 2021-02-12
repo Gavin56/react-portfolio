@@ -11,10 +11,6 @@ import Box from "@material-ui/core/Box";
 import Home from "../../pages/Home/index";
 import Portfolio from "../../pages/Portfolio/index";
 import Contact from "../../pages/Contact/index";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import IconButton from "@material-ui/core/IconButton";
-import GitHubIcon from "@material-ui/icons/GitHub";
-import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import "bootstrap/dist/css/bootstrap.min.css";
 
