@@ -23,12 +23,6 @@ function About() {
       fontSize: 20,
       fontFamily: "Mukta",
     },
-    contactInfo: {
-      color: "white",
-      marginTop: 40,
-      marginRight: 100,
-      fontFamily: "Mukta",
-    },
     fontFamily: "Chivo",
   }));
 
@@ -75,7 +69,7 @@ function About() {
                 </IconButton> */}
                 </p>
 
-                <p className={classes.contactInfo} id="contact-info">
+                <div id="contact-info">
                   <strong style={{ fontStyle: "italic", fontSize: 20 }}>
                     Contact me:
                   </strong>
@@ -83,7 +77,7 @@ function About() {
                   GavinOBrien56@gmail.com
                   <br />
                   (201) 414-6122
-                </p>
+                </div>
               </div>
             </Container>
           </div>

@@ -78,7 +78,7 @@ export default function FullWidthTabs() {
     setValue(index);
   };
 
-  const mobileTabs = useMediaQuery("(max-width:600px)");
+  const mobileStyles = useMediaQuery("(max-width:600px)");
 
   return (
     <div>
@@ -97,7 +97,7 @@ export default function FullWidthTabs() {
               onChange={handleChange}
               indicatorColor="primary"
               textColor="primary"
-              variant={mobileTabs && "fullWidth"}
+              variant={mobileStyles && "fullWidth"}
             >
               <Tab className={classes.tab} label="Home" {...a11yProps(0)} />
               <Tab
@@ -109,7 +109,7 @@ export default function FullWidthTabs() {
             </Tabs>
           </Grid>
           <Grid item xs={12} md={6} className={classes.nav}>
-            <h1 style={{ textAlign: "center", marginTop: 15, fontFamily: "Montserrat Alternates" }}>
+            <h1 style={{ textAlign: "center", marginTop:5, fontFamily: "Montserrat Alternates" }}>
               Gavin O'Brien
             </h1>
           </Grid>

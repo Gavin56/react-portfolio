@@ -2,6 +2,11 @@ body {
   background-color: rgb(32, 33, 33);
 }
 
+#contact-info {
+  color: white;
+  font-family: "Mukta";
+}
+
 /* Medium screens and up */
 @media only screen and (min-width: 776px) {
   #paper {
@@ -43,8 +48,6 @@ body {
 /* Smaller screens */
 @media only screen and (max-width: 776px) {
   #paper {
-    display: flex;
-    justify-content: center;
     text-align: center;
     height: 100%;
     background: rgba(0, 0, 0, 0.3);
