@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import SwipeableViews from "react-swipeable-views";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
@@ -77,6 +78,8 @@ export default function FullWidthTabs() {
     setValue(index);
   };
 
+  const mobileTabs = useMediaQuery('(max-width:600px)');
+
   return (
     <div>
       <AppBar
@@ -90,12 +93,13 @@ export default function FullWidthTabs() {
           onChange={handleChange}
           indicatorColor="primary"
           textColor="primary"
+          variant={mobileTabs && "fullWidth"}
         >
           <Tab className={classes.tab} label="Home" {...a11yProps(0)} />
           <Tab className={classes.tab} label="Portfolio" {...a11yProps(1)} />
           <Tab className={classes.tab} label="Contact" {...a11yProps(2)} />
 
-          <Grid item xs={12} className={classes.nav}>
+          {/* <Grid item xs={12} className={classes.nav}>
             <h1 style={{ float: "left", fontFamily: "Montserrat Alternates" }}>
               Gavin O'Brien
             </h1>
@@ -129,7 +133,7 @@ export default function FullWidthTabs() {
                 Resume
               </Button>
             </div>
-          </Grid>
+          </Grid> */}
         </Tabs>
       </AppBar>
       <SwipeableViews
