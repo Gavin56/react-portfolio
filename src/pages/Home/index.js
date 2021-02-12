@@ -17,12 +17,6 @@ function About() {
         paddingBottom: 50,
       },
     },
-    about: {
-      marginTop: 100,
-      color: "white",
-      fontSize: 20,
-      fontFamily: "Mukta",
-    },
     fontFamily: "Chivo",
   }));
 
@@ -43,22 +37,20 @@ function About() {
             <div id="image-div">
               <img
                 id="my-photo"
-                src="https://lh3.googleusercontent.com/pw/ACtC-3f8UlBk_doTYMrS7x07jLtCn6D2e2I7LVeKy0j1a8px4Y_iYm8163EZsBE1sqZu8R_8v1SD0rFZv1Zn6nCa0jEbAEcwu6JOExetuQX5390qPvDC1EEE_ojFmTHia-zlyw4ipcDcm-OmCSG46-M8u0L_=w675-h899-no?authuser=0"
+                src="https://github.com/Gavin56/images/blob/main/portfolio-placeholder-photo-square.jpg?raw=true"
                 alt="Me, sitting"
               ></img>
             </div>
 
             <Container>
-              <div>
-                <p id="about" className={classes.about}>
+              <div id="transparent-backdrop">
+                <p id="about">
                   My name is Gavin O'Brien. I was born and raised in New Jersey.
                   I currently have an Associate's Degree from Bergen Community
                   college and will be attending the New Jersey Institute of
                   Technology in the Fall. I am an aspiring web developer with
                   great interest in developing apps that are equally aesthetic
                   as they are functional.
-                  <br />
-                  <br /> <br />
                   {/* Check out some of my applications over here:
                 <IconButton>
                   <DoubleArrowIcon
