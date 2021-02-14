@@ -20,6 +20,8 @@ const useStyles = makeStyles((theme) => ({
   card: {
     padding: theme.spacing(2),
     textAlign: "center",
+    backgroundColor: "rgb(70, 70, 70)",
+    color: "white"
   },
 }));
 
@@ -51,7 +53,6 @@ export default function SimpleGrow({project}) {
           </Typography>
           <Typography
             variant="body2"
-            color="textSecondary"
             component="p"
           >
             {project.description}

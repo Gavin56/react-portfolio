@@ -13,6 +13,7 @@ import Portfolio from "../../pages/Portfolio/index";
 import Contact from "../../pages/Contact/index";
 import Grid from "@material-ui/core/Grid";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./style.css"
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -54,11 +55,9 @@ const useStyles = makeStyles((theme) => ({
   tab: {
     color: "white",
   },
-  // nav: {
-  //   marginLeft: "30%",
-  //   marginTop: 10,
-  //   color: "white",
-  // },
+  tabs: {
+    textColor: "teal"
+  }
 }));
 
 export default function FullWidthTabs() {
@@ -74,7 +73,7 @@ export default function FullWidthTabs() {
     setValue(index);
   };
 
-  const mobileStyles = useMediaQuery("(max-width:600px)");
+  const mobileStyles = useMediaQuery("(max-width:960px)");
 
   return (
     <div>
@@ -91,6 +90,7 @@ export default function FullWidthTabs() {
               md={6}
               value={value}
               onChange={handleChange}
+              className={classes.tabs}
               indicatorColor="primary"
               textColor="primary"
               variant={mobileStyles && "fullWidth"}
@@ -104,8 +104,8 @@ export default function FullWidthTabs() {
               <Tab className={classes.tab} label="Contact" {...a11yProps(2)} />
             </Tabs>
           </Grid>
-          <Grid item xs={12} md={6} className={classes.nav}>
-            <h1 style={{ textAlign: "center", marginTop:5, fontFamily: "Montserrat Alternates" }}>
+          <Grid item xs={12} md={6}>
+            <h1 id="my-name" style={{ textAlign: "center",  }}>
               Gavin O'Brien
             </h1>
           </Grid>

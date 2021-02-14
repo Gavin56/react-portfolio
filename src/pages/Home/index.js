@@ -27,7 +27,7 @@ function About() {
   const checked = true;
 
   return (
-    <div>
+    <div style={{overflow: "hidden"}}>
       <Grow
         in={checked}
         style={{ transformOrigin: "0 0 0" }}
@@ -35,7 +35,7 @@ function About() {
       >
         <Paper id="paper" className={classes.paper}>
           <div>
-            <h1>Welcome. Thank you for checking out my work.</h1>
+            <h1 id="welcome">Welcome. Thank you for checking out my work.</h1>
 
             <div id="image-div">
               <img
@@ -74,9 +74,7 @@ function About() {
                     <br />
                     (201) 414-6122
                   </div>
-                  <div
-                    id="contact-buttons"
-                  >
+                  <div id="contact-buttons">
                     <IconButton
                       aria-label="github"
                       href="https://github.com/Gavin56"
