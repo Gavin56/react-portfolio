@@ -33,7 +33,7 @@ function About() {
         style={{ transformOrigin: "0 0 0" }}
         {...(checked ? { timeout: 1000 } : {})}
       >
-        <Paper id="paper" className={classes.paper}>
+        <Paper id="paper">
           <div>
             <h1 id="welcome">Welcome. Thank you for checking out my work.</h1>
 

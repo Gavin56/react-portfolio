@@ -11,6 +11,10 @@ body {
   padding-bottom: 70px;
 }
 
+#welcome {
+  font-family: "Spartan";
+}
+
 #my-photo {
   float: left;
   height: 200px;
@@ -99,5 +103,10 @@ body {
     text-align: center;
     color: white;
     font-family: "Mukta";
+  }
+
+  #welcome {
+    padding-top: 10px;
+    font-size: 30px;
   }
 }

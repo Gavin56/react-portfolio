@@ -48,6 +48,7 @@ export default function SimpleGrow({project}) {
             gutterBottom
             variant="h5"
             component="h2"
+            style={{fontFamily:"Spartan"}}
           >
             {project.name}
           </Typography>

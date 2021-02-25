@@ -16,7 +16,7 @@ body {
 }
 
 /* Larger screens */
-@media only screen and (min-width: 776px) {
+/* @media only screen and (min-width: 776px) {
   #form-div {
     display: flex;
     justify-content: center;
@@ -24,6 +24,9 @@ body {
 }
 
 /* Smaller screens */
-@media only screen and (max-width: 776px) {
-  
-}
+/* @media only screen and (max-width: 776px) {
+  #form-div {
+    display: flex;
+    justify-content: center;
+  }
+}  */
