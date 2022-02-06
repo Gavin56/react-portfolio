@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <div>
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router basename="gavin56.github.io/react-portfolio/">
         <div
           style={{
             position: "absolute",
