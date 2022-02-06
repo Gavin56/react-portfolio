@@ -100,7 +100,7 @@ function About() {
                         style={{
                           textDecoration: "none",
                         }}
-                        href="https://drive.google.com/file/d/16iPBQwg1EaKFSzm4a0Q-4eB7Q0s6cKND/view?usp=sharing"
+                        href="https://drive.google.com/file/d/1hQM9ALJAQBeEYGHOCs4RgKvWl02zBPGD/view?usp=sharing"
                       >
                         Resume
                       </a>
